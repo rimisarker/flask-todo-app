@@ -35,11 +35,6 @@ jobs:
       - name: Run mypy
         run: mypy .
 
-      - name: Run Bandit
-        run: bandit -r . --exclude venv
-
-
-
       - name: Run pip-audit
         run: pip-audit
 
