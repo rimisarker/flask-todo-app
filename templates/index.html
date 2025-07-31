@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>ToDo App</title></head>
+<body>
+<h1>My ToDo List</h1>
+<form action="/add" method="post">
+<input type="text" name="task" placeholder="Enter task" required>
+<button type="submit">Add</button>
+</form>
+<ul>
+{% for idx, task in enumerate(tasks) %}
+<li>{{ task }} <a href="/delete/{{ idx }}">❌</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
