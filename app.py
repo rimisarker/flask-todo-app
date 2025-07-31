@@ -1,7 +1,8 @@
 from flask import Flask, redirect, render_template, request, url_for
+from typing import List  # ✅ টাইপ import করা
 
 app = Flask(__name__)
-tasks = []
+tasks: List[str] = []  # ✅ টাইপ annotate করা
 
 
 @app.route("/")
